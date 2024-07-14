@@ -5,11 +5,11 @@
 Return the built car.*/
 
 function buildingACar() {
-  let car = {
+  let carOj = {
     wheels: 4,
     power: 100,
     doors: 3
   };
 
-  return car;
+  return carObj;
 }
