@@ -5,7 +5,7 @@
 Return the built car.*/
 
 function buildingACar() {
-  let carOj = {
+  let carObj = {
     wheels: 4,
     power: 100,
     doors: 3
