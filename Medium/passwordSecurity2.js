@@ -10,7 +10,7 @@ Return true only if all criteria are met, otherwise return false.*/
 
 function checkPassword(password, password_repeat) {
   
-    let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[&$%\\u00A7-_]).{8,}$/;
+    let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[&$%\-_]).{8,}$/;
 
    
     if (password !== password_repeat) {
