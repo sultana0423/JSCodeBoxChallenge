@@ -12,11 +12,9 @@ function checkPassword(password, password_repeat) {
   
     let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[&$%\-_]).{8,}$/;
 
-   
     if (password !== password_repeat) {
         return false;
     }
 
-    
     return passwordRegex.test(password);
 }
