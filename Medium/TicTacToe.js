@@ -2,24 +2,21 @@
 One player has 'X' as character and the other 'O'. 
 Return true if a player has won the game. If no player has won, return 'Tie'.*/
 
- // let line1 = ['XOX'];
- // let line2 = ['XXX'];
- // let line3 = ['OXO'];
- // console.log(line1[0]);
- // console.log(line1[0][0]);
- // console.log(line1[0][0] == line2[0][0]);
- // let horizantal = line1[0][0] == line1[0][1] && line1[0][0] == line1[0][2];
- // let vertical = line1[0][0] == line2[0][0] && line1[0][0] == line3[0][0];
- // let digonal = line1[0][0] == line2[0][1] && line1[0][0] == line3[0][2];
- // console.log(digonal);
+function solveTicTacToe(line1, line2, line3) {
+   let arrayOfLines = [
+    line1[0].split(''),
+    line2[0].split(''),
+    line3[0].split('')
+  ];
 
-// let line1 = ['XOX'];
-//  let line2 = ['XXX'];
-//  let line3 = ['OXO'];
- 
-//  let string1 = line1[0];
-//  let string2 = line2[0];
-//  let string3 = line3[0];
- 
-//  let theArray = [string1, string2, string3];
-//  console.log(theArray);
+  let horizontalWin = arrayOfLines.some(row => row.every(cell => cell === row[0]));
+  let verticalWin = arrayOfLines[0].some((_, colIndex) => arrayOfLines.every(row => row[colIndex] === arrayOfLines[0][colIndex]));
+  let diagonalWin = [arrayOfLines[0][0], arrayOfLines[1][1], arrayOfLines[2][2]].every(cell => cell === arrayOfLines[0][0]) || 
+                  [arrayOfLines[0][2], arrayOfLines[1][1], arrayOfLines[2][0]].every(cell => cell === arrayOfLines[0][2]);
+
+  if (horizontalWin || verticalWin || diagonalWin) {
+    return true;
+  }
+
+  return 'Tie';
+}
