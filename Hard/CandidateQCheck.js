@@ -15,7 +15,6 @@ Hard questions: 20 minutes each.*/
 Otherwise, it should return "disqualified".*/
 
 //CODE IS NOT FINISHED
-
   function isQualified(times, totalTime) {
      
     let totalMaxE = 30;
@@ -53,10 +52,13 @@ Otherwise, it should return "disqualified".*/
     let passedHard = hardSum(hardArray) <= totalMaxH;
     let passed = passedEasy && passedMed && passedHard;
     
-    if ((passed && totalTime < 140) || (!passed && totalTime >= 140)) {
-    return "qualified";
-    } else {
-    return "disqualified";
+  if ( passed === true && totalTime <= 140) {
+      return 'qualified';
+    }  else if (passed === false && totalTime <= 140) {
+      return 'disqualified';
+    }  else {
+    return 'disqualified';
     }
+    
     
 }
