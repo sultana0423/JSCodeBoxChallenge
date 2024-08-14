@@ -22,8 +22,7 @@ function isQualified(times, totalTime) {
         if (times[i] > maxTimes[i]) {
             return 'disqualified';
         }
-    }
-
+    } 
     if (totalTime <= maxTotalTime) {
         return 'qualified';
     } else {
