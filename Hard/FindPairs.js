@@ -6,7 +6,6 @@ Important: Your result array(s) must have the same sorting as the test cases.*/
 function findPairs(arr, target) {
   let pairs = [];
     let seen = new Set();
-    
     for (let i = 0; i < arr.length; i++) {
         let complement = target - arr[i];
         
