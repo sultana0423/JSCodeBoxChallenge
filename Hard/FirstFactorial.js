@@ -10,5 +10,5 @@ function firstFactorial(number) {
     num--;
   }
 
-  return fact:
+  return fact;
 }
